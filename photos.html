@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slid site-annonces</title>
+    <link rel="stylesheet" type="text/css" href="photos.css" media="all"/>
+</head>
+<body>
+    <div class="main">
+    <div class="row">
+        <div class="bloc">
+           <img src="images/1.jpg" onclick="openBox();toSlide(1)" class="hover-shadow preview" alt="fleur" />
+        </div>
+        <div class="bloc">
+           <img src="images/2.jpg" onclick="openBox();toSlide(2)" class="hover-shadow preview" alt="fleur" />
+        </div>
+        <div class="bloc">
+           <img src="images/3.jpg" onclick="openBox();toSlide(3)" class="hover-shadow preview" alt="fleur" />
+        </div>
+      </div>
+ 
+           
+      <div id="box" class="modal">
+        <span class="close pointer" onclick="closeBox()">&times;</span>
+        <div class="modal-content">
+          <div class="slide">
+              <img src="images/1.jpg" class="image-slide" alt="fleur" />
+          </div>
+          <div class="slide">
+              <img src="images/2.jpg" class="image-slide" alt="fleur" />
+          </div>    
+          <div class="slide">
+              <img src="images/3.jpg" class="image-slide" alt="fleur" />
+          </div>
+        
+          <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+          <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        
+          <div class="points">
+            <div class="bloc">
+              <img src="images/1.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="fleur" />
+            </div>
+            <div class="bloc">
+              <img src="images/2.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="fleur" />
+            </div>
+            <div class="bloc">
+              <img src="images/3.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="fleur" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="photos.js"></script>
+</body>
+</html>
