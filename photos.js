@@ -26,6 +26,7 @@ function toSlide(n) {
 //  Mode d'affichage de la diapositive 
 
 
+
 function showSlide(n) {
   const slides = document.getElementsByClassName('slide');
   let modalPreviews = document.getElementsByClassName('modal-preview');
@@ -44,8 +45,10 @@ function showSlide(n) {
   
   for (let i = 0; i < modalPreviews.length; i++) {
     modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+    
   };
-  
+  setTimeout(function(){
   slides[slideIndex - 1].style.display = 'block';
-  modalPreviews[slideIndex - 1].className += ' active';
+  modalPreviews[slideIndex - 1].className += ' active'; }, 50);
+
 };
